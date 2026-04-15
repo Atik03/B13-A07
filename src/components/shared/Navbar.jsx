@@ -4,6 +4,7 @@ import logo from "../../assets/logo.png";
 import { FaHome } from "react-icons/fa";
 import { RiTimeLine } from "react-icons/ri";
 import { ImStatsDots } from "react-icons/im";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   const navLinkClass = ({ isActive }) =>
@@ -15,11 +16,10 @@ const Navbar = () => {
     <>
       <div className="w-full border-b-2 border-gray-200">
         <div className="navbar bg-base-100 container mx-auto px-4">
-          {/* LEFT: Hamburger (mobile only) */}
           <div className="navbar-start md:hidden">
             <div className="dropdown md:hidden">
               <label tabIndex={0} className="btn btn-ghost">
-                ☰
+                <GiHamburgerMenu />
               </label>
 
               <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
@@ -42,12 +42,10 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* LOGO (LEFT on md+) */}
           <div className="flex-1 flex justify-end md:justify-start">
             <img src={logo} alt="Logo" className="w-28" />
           </div>
 
-          {/* MENU (md and up) */}
           <div className="hidden md:flex gap-2">
             <NavLink to="/" className={navLinkClass}>
               <FaHome /> Home
