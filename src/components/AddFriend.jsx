@@ -3,7 +3,7 @@ import { FaPlus } from "react-icons/fa";
 
 function AddFriend() {
   return (
-    <div className="w-full text-center pt-[80px]">
+    <div className="w-full text-center pt-[80px] container mx-auto">
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
         Friends to keep close in your life
       </h1>
