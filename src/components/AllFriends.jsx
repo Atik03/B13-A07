@@ -1,4 +1,3 @@
-import React from "react";
 import { use } from "react";
 import { Link } from "react-router-dom";
 
@@ -9,12 +8,12 @@ const AllFriends = ({ allFriendsPromise }) => {
     <div className="w-full container mx-auto mt-6">
       <h2 className="text-2xl font-bold">Your Friends</h2>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-4 ">
-        {allFriendsData.map((friend) => {
+        {allFriendsData.map((friend, index) => {
           return (
             <Link
               to={`/friendDetails/${friend.id}`}
               className="card bg-base-100 shadow-sm"
-              key={friend.id}
+              key={index}
             >
               <figure className="w-full mt-4">
                 <img

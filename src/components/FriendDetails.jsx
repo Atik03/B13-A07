@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData, useParams } from "react-router";
 import { IoCall } from "react-icons/io5";
 import { BiMessageDots } from "react-icons/bi";
@@ -6,6 +6,7 @@ import { LuVideo } from "react-icons/lu";
 import { FaBell } from "react-icons/fa";
 import { IoArchiveSharp } from "react-icons/io5";
 import { MdDeleteForever } from "react-icons/md";
+import { FriendContext } from "../context/FriendContext";
 
 function FriendDetails() {
   const { id: friendId } = useParams();
@@ -14,6 +15,9 @@ function FriendDetails() {
   const expectedFriend = friendData.find(
     (friend) => friend.id === Number(friendId),
   );
+
+  const { call, message, video, handleCall, handleMessage, handleVideo } =
+    useContext(FriendContext);
 
   const {
     id,
@@ -122,19 +126,28 @@ function FriendDetails() {
               <p className="font-medium text-gray-700">Quick Check-In</p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <button className="bg-gray-100 hover:bg-gray-200 rounded-lg py-6 flex flex-col items-center justify-center gap-1">
+                <button
+                  onClick={() => handleCall(expectedFriend)}
+                  className="bg-gray-100 hover:bg-gray-200 rounded-lg py-6 flex flex-col items-center justify-center gap-1"
+                >
                   <span className="text-xl">
                     <IoCall />
                   </span>
                   <span className="text-sm">Call</span>
                 </button>
 
-                <button className="bg-gray-100 hover:bg-gray-200 rounded-lg py-6 flex flex-col items-center justify-center gap-1">
+                <button
+                  onClick={() => handleMessage(expectedFriend)}
+                  className="bg-gray-100 hover:bg-gray-200 rounded-lg py-6 flex flex-col items-center justify-center gap-1"
+                >
                   <BiMessageDots />
                   <span className="text-sm">Text</span>
                 </button>
 
-                <button className="bg-gray-100 hover:bg-gray-200 rounded-lg py-6 flex flex-col items-center justify-center  gap-1">
+                <button
+                  onClick={() => handleVideo(expectedFriend)}
+                  className="bg-gray-100 hover:bg-gray-200 rounded-lg py-6 flex flex-col items-center justify-center  gap-1"
+                >
                   <LuVideo />
                   <span className="text-sm">Video</span>
                 </button>
