@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { createContext } from "react";
 export const FriendContext = createContext();
+import { toast } from "react-toastify";
 
 function FriendContextProvider({ children }) {
   const [call, setCall] = useState([]);
@@ -9,17 +10,17 @@ function FriendContextProvider({ children }) {
 
   const handleCall = (friendData) => {
     setCall((prevCalls) => [...prevCalls, friendData]);
-    // console.log("handleCall called with friendData:", friendData);
+    toast.success(`Call ${friendData.name}`);
   };
 
   const handleMessage = (friendData) => {
     setMessage((prevMessages) => [...prevMessages, friendData]);
-    // console.log("handleMessage called with friendData:", friendData);
+    toast.info(`Text ${friendData.name}`);
   };
 
   const handleVideo = (friendData) => {
     setVideo((prevVideos) => [...prevVideos, friendData]);
-    // console.log("handleVideo called with friendData:", friendData);
+    toast.warn(`Video ${friendData.name}`);
   };
 
   const data = { call, message, video, handleCall, handleMessage, handleVideo };
