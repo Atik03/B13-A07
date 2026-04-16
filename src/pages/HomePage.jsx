@@ -1,6 +1,5 @@
 import AddFriend from "../components/AddFriend";
 import AllFriends from "../components/AllFriends";
-import FriendDetails from "../components/FriendDetails";
 import FriendTrackSection from "../components/FriendTrackSection";
 import { Suspense } from "react";
 
@@ -21,8 +20,6 @@ function HomePage() {
       >
         <AllFriends allFriendsPromise={allFriendsPromise} />
       </Suspense>
-
-      <FriendDetails></FriendDetails>
     </div>
   );
 }

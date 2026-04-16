@@ -1,5 +1,6 @@
 import React from "react";
 import { use } from "react";
+import { Link } from "react-router-dom";
 
 const AllFriends = ({ allFriendsPromise }) => {
   const allFriendsData = use(allFriendsPromise);
@@ -10,10 +11,14 @@ const AllFriends = ({ allFriendsPromise }) => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-4 ">
         {allFriendsData.map((friend) => {
           return (
-            <div className="card bg-base-100 shadow-sm">
+            <Link
+              to={`/friendDetails/${friend.id}`}
+              className="card bg-base-100 shadow-sm"
+              key={friend.id}
+            >
               <figure className="w-full mt-4">
                 <img
-                  className="w-25 h-25 rounded-full"
+                  className="w-24 h-24 rounded-full"
                   src={friend.picture}
                   alt={friend.name}
                 />
@@ -46,7 +51,7 @@ const AllFriends = ({ allFriendsPromise }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
