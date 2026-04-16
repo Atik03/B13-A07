@@ -1,12 +1,28 @@
-import React from "react";
 import AddFriend from "../components/AddFriend";
+import AllFriends from "../components/AllFriends";
+import FriendDetails from "../components/FriendDetails";
 import FriendTrackSection from "../components/FriendTrackSection";
+import { Suspense } from "react";
+
+const allFriendsPromise = fetch("peopleData.json").then((res) => res.json());
 
 function HomePage() {
   return (
-    <div className="w-full bg-gray-100 lg:px-[245px] ">
+    <div className="w-full bg-gray-100 lg:px-[230px] ">
       <AddFriend></AddFriend>
       <FriendTrackSection></FriendTrackSection>
+
+      <Suspense
+        fallback={
+          <div className="w-full text-center">
+            <h2>Loading...</h2>
+          </div>
+        }
+      >
+        <AllFriends allFriendsPromise={allFriendsPromise} />
+      </Suspense>
+
+      <FriendDetails></FriendDetails>
     </div>
   );
 }
