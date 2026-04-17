@@ -13,8 +13,8 @@ function HomePage() {
 
       <Suspense
         fallback={
-          <div className="w-full text-center">
-            <h2>Loading...</h2>
+          <div className="w-full h-screen text-center py-10">
+            <span className="loading loading-spinner text-primary"></span>
           </div>
         }
       >
