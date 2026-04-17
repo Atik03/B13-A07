@@ -1,7 +1,7 @@
 
 
 
-## project name: KeenKeeper
+## Project Name: KeenKeeper
   
 ## Description:
  KeenKeeper is a friend management web application designed to help users stay connected with their friends. The platform allows users to see who is active and who is  not, making it easier to keep track of interactions. Users can initiate calls, send messages, and even make video calls directly through the site. Additionally, it    helps users maintain regular communication and check in on their friends. Overall, KeenKeeper is a highly user-friendly and intuitive website built to simplify        social  connections.
