@@ -7,7 +7,7 @@ const AllFriends = ({ allFriendsPromise }) => {
   return (
     <div className="w-full container mx-auto mt-6 px-5 pb-8">
       <h2 className="text-2xl font-bold">Your Friends</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  gap-4 mt-4">
         {allFriendsData.map((friend, index) => {
           return (
             <Link

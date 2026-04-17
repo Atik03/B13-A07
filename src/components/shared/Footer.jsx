@@ -3,7 +3,7 @@ import { FaYoutube, FaFacebookF, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2f5d50] text-white py-12 px-4 w-full h-full lg:px-[130px] ">
+    <footer className="bg-[#2f5d50] text-white py-12 px-4 w-full h-full lg:px-[100px] ">
       <div className="container mx-auto text-center">
         <h1 className="text-5xl font-bold mb-4">
           Keen<span className="font-semibold">Keeper</span>

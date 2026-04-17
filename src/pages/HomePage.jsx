@@ -7,7 +7,7 @@ const allFriendsPromise = fetch("/peopleData.json").then((res) => res.json());
 
 function HomePage() {
   return (
-    <div className="w-full bg-gray-100 lg:px-[230px] ">
+    <div className="w-full bg-gray-100 lg:px-[100px] ">
       <AddFriend></AddFriend>
       <FriendTrackSection></FriendTrackSection>
 

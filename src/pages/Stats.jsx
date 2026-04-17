@@ -36,7 +36,7 @@ const Stats = () => {
   };
 
   return (
-    <div className="w-full bg-gray-100 lg:px-[230px] py-6">
+    <div className="w-full bg-gray-100 lg:px-[100px] py-6">
       <div className="container mx-auto px-5">
         <h2 className="text-2xl font-bold mb-5">Friendship Analytics</h2>
 

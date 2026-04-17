@@ -15,7 +15,7 @@ const FriendTrackSection = () => {
 
   return (
     <div className="w-full container mx-auto px-5">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
         <div className="h-[133px] bg-white flex items-center justify-center flex-col gap-1 rounded-lg shadow text-center">
           <h3 className="font-bold text-[rgb(36,77,63)]">{peopleLength}</h3>
           <p>Total Friends</p>

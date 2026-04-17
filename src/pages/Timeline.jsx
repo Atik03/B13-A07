@@ -20,7 +20,7 @@ const Timeline = () => {
   );
 
   return (
-    <div className="w-full bg-gray-100 py-10 px-5 lg:px-[230px]">
+    <div className="w-full bg-gray-100 py-10 px-5 lg:px-[100px]">
       <div className="container mx-auto ">
         <h2 className="font-bold text-3xl mb-8">Timeline</h2>
 

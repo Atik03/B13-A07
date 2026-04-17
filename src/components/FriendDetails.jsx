@@ -35,7 +35,7 @@ function FriendDetails() {
   return (
     <div className="w-full h-auto bg-gray-100 ">
       <div className="w-full bg-gray-100 container mx-auto px-4 py-10">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className=" lg:px-[100px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="md:col-span-1 grid gap-4">
             <div className="bg-white rounded-2xl shadow p-2 text-center grid gap-1">
               <img
