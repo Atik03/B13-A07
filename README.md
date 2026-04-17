@@ -1,16 +1,23 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## project name: KeenKeeper
+  
+## Description:
+ KeenKeeper is a friend management web application designed to help users stay connected with their friends. The platform allows users to see who is active and who is  not, making it easier to keep track of interactions. Users can initiate calls, send messages, and even make video calls directly through the site. Additionally, it    helps users maintain regular communication and check in on their friends. Overall, KeenKeeper is a highly user-friendly and intuitive website built to simplify        social  connections.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used.
+  React.js, 
+  Tailwind CSS, 
+  DaisyUI JavaScript (ES6+), 
+  React-Toastify (NPM Package), 
+  JSON (for product data),
+  React Router,
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features.
+- Track which friends are active or inactive  
+- Make calls directly from the platform  
+- Send messages to friends  
+- Support for video calling  
+- Keep track of friend interactions and stay updated  
+- User-friendly and intuitive interface
+  
