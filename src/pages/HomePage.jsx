@@ -3,7 +3,7 @@ import AllFriends from "../components/AllFriends";
 import FriendTrackSection from "../components/FriendTrackSection";
 import { Suspense } from "react";
 
-const allFriendsPromise = fetch("peopleData.json").then((res) => res.json());
+const allFriendsPromise = fetch("/peopleData.json").then((res) => res.json());
 
 function HomePage() {
   return (

@@ -10,17 +10,17 @@ function FriendContextProvider({ children }) {
 
   const handleCall = (friendData) => {
     setCall((prevCalls) => [...prevCalls, friendData]);
-    toast.success(`Call ${friendData.name}`);
+    toast.success(`Call with ${friendData.name}`);
   };
 
   const handleMessage = (friendData) => {
     setMessage((prevMessages) => [...prevMessages, friendData]);
-    toast.info(`Text ${friendData.name}`);
+    toast.info(`Text with ${friendData.name}`);
   };
 
   const handleVideo = (friendData) => {
     setVideo((prevVideos) => [...prevVideos, friendData]);
-    toast.warn(`Video ${friendData.name}`);
+    toast.warn(`Video with ${friendData.name}`);
   };
 
   const data = { call, message, video, handleCall, handleMessage, handleVideo };

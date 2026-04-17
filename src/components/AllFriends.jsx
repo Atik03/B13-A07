@@ -5,9 +5,9 @@ const AllFriends = ({ allFriendsPromise }) => {
   const allFriendsData = use(allFriendsPromise);
 
   return (
-    <div className="w-full container mx-auto mt-6">
+    <div className="w-full container mx-auto mt-6 px-5 pb-8">
       <h2 className="text-2xl font-bold">Your Friends</h2>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4 mt-4">
         {allFriendsData.map((friend, index) => {
           return (
             <Link
@@ -29,7 +29,6 @@ const AllFriends = ({ allFriendsPromise }) => {
 
                 <div className="card-actions flex flex-col items-center">
                   <div className="flex gap-2 text-black">
-                    {" "}
                     {friend.tags.map((tag, index) => (
                       <div key={index} className=" badge bg-green-200 badge-sm">
                         {tag}

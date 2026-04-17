@@ -33,7 +33,7 @@ function FriendDetails() {
   } = expectedFriend;
 
   return (
-    <div className="w-full bg-gray-100 ">
+    <div className="w-full h-auto bg-gray-100 ">
       <div className="w-full bg-gray-100 container mx-auto px-4 py-10">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="md:col-span-1 grid gap-4">
@@ -113,7 +113,8 @@ function FriendDetails() {
               <div className="grid gap-1">
                 <p className="text-sm text-gray-500">Relationship Goal</p>
                 <p className="text-gray-800 font-medium">
-                  Connect every <span className="font-semibold">30 days</span>
+                  Connect every
+                  <span className="font-semibold"> {goal} days</span>
                 </p>
               </div>
 
@@ -131,25 +132,25 @@ function FriendDetails() {
                   className="bg-gray-100 hover:bg-gray-200 rounded-lg py-6 flex flex-col items-center justify-center gap-1"
                 >
                   <span className="text-xl">
-                    <IoCall />
+                    <IoCall className="text-4xl" />
                   </span>
-                  <span className="text-sm">Call</span>
+                  <span className="text-xl">Call</span>
                 </button>
 
                 <button
                   onClick={() => handleMessage(expectedFriend)}
                   className="bg-gray-100 hover:bg-gray-200 rounded-lg py-6 flex flex-col items-center justify-center gap-1"
                 >
-                  <BiMessageDots />
-                  <span className="text-sm">Text</span>
+                  <BiMessageDots className="text-4xl" />
+                  <span className="text-xl">Text</span>
                 </button>
 
                 <button
                   onClick={() => handleVideo(expectedFriend)}
                   className="bg-gray-100 hover:bg-gray-200 rounded-lg py-6 flex flex-col items-center justify-center  gap-1"
                 >
-                  <LuVideo />
-                  <span className="text-sm">Video</span>
+                  <LuVideo className="text-4xl" />
+                  <span className="text-xl">Video</span>
                 </button>
               </div>
             </div>
